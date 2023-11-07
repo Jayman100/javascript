@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-size: 20px;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      #inputNumber,
+      #inputName {
+        width: 500px;
+        font-size: 0.8rem;
+        padding: 1rem;
+        border-radius: 10px;
+        border: 2px solid #5c5353;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+      }
+
+      .checkRandom,
+      .checkName {
+        display: block;
+        padding: 0.5rem;
+        width: 200px;
+        border-radius: 10px;
+        border: 1px solid grey;
+        margin: 1rem auto;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="#">
+      <h1>Guess a number game!!!</h1>
+      <label for="inputNumber">Input number:</label>
+      <input
+        type="text"
+        name=""
+        id="inputNumber"
+        placeholder="Enter a number"
+        value="50"
+      />
+      <button class="checkRandom">check</button>
+      <p class="errorText"></p>
+    </form>
+
+    <form action="#">
+      <h1>Name Length checker</h1>
+      <label for="inputName">Input your name:</label>
+      <input type="text" name="" id="inputName" placeholder="Enter your name" />
+      <button class="checkName">check</button>
+      <p class="nameErrorText"></p>
+    </form>
+
+    <script src="index.js"></script>
+  </body>
+</html>

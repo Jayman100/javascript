@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Loops: Task 2</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+    <section class="preview"></section>
+  </body>
+  <script>
+    const name = "Jada";
+    const para = document.createElement("p");
+
+    const phonebook = [
+      { name: "Chris", number: "1549" },
+      { name: "Li Kang", number: "9634" },
+      { name: "Anne", number: "9065" },
+      { name: "Francesca", number: "3001" },
+      { name: "Mustafa", number: "6888" },
+      { name: "Tina", number: "4312" },
+      { name: "Bert", number: "7780" },
+      { name: "Jada", number: "2282" },
+    ];
+
+    // Add your code here
+    // for (let i = 0; i < phonebook.length; i++) {
+    //   console.log(i);
+    //   const phonebookIndex = phonebook[i];
+    //   console.log(phonebookIndex);
+    //   if (name === phonebookIndex.name) {
+    //     para.textContent = `${phonebookIndex.name} ${phonebookIndex.number}`;
+    //     break;
+    //   } else {
+    //     para.textContent = "Not found in phonebook";
+    //   }
+    // }
+
+    for (let i = 0; i < phonebook.length; i++) {
+      if (phonebook[i].name === name) {
+        console.log(phonebook[i]);
+        para.textContent = `${phonebook[i].name}'s number is ${phonebook[i].number}.`;
+        break;
+      }
+
+      if (i === phonebook.length - 1) {
+        para.textContent = "Name not found in the phonebook";
+      }
+    }
+    // Don't edit the code below here!
+    const section = document.querySelector("section");
+    section.appendChild(para);
+  </script>
+</html>

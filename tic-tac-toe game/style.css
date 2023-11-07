@@ -1,0 +1,106 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  /* background-color: #000; */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+  width: 30rem;
+  gap: 1.5rem;
+}
+
+.btn-heading {
+  font-size: 2rem;
+}
+
+.btn-box {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-x,
+.btn-o {
+  font-size: 5rem;
+  background: none;
+  border: none;
+  width: 50%;
+  border-radius: 5px;
+  cursor: pointer;
+  border-bottom: 4px solid transparent;
+
+  outline: 1px solid #555;
+}
+
+.btn-o:focus,
+.btn-x:focus {
+  border-bottom: 4px solid #555;
+}
+
+.game-container {
+  background-color: #555;
+
+  width: 30rem;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 10rem);
+  gap: 0.5rem;
+  position: relative;
+}
+
+.grids {
+  background-color: #fff;
+
+  font-size: 5rem;
+  text-transform: uppercase;
+  font: 500;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-container {
+  height: 20rem;
+  width: 30rem;
+  background-color: #eeeeeeee;
+  position: absolute;
+  top: 37.59%;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+
+  transition: all 0.8s;
+}
+
+.popup-text-1 {
+  font-size: 9rem;
+}
+.popup-text-2 {
+  font-size: 6rem;
+}

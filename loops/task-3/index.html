@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Loops: Task 3</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      .output {
+        color: #fff;
+        display: inline-block;
+        /* width: 100%; */
+        padding: 10px 20px;
+        font-size: 1.2rem;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+    <section class="preview"></section>
+
+    <div>
+      <label class="labelItem" for="evenNumber">input number:</label>
+      <input type="text" id="evenNumber" />
+      <button class="btn" style="display: block">check</button>
+      <p class="output"></p>
+
+      <p class="checkNumber"></p>
+    </div>
+  </body>
+  <script>
+    const input = document.querySelector("#evenNumber");
+    const btn = document.querySelector(".btn");
+    const para = document.querySelector(".output");
+    const labelItem = document.querySelector(".labelItem");
+    const checkNumber = document.querySelector(".checkNumber");
+
+    labelItem.textContent = labelItem.textContent.toUpperCase();
+    console.log(labelItem.textContent.toUpperCase());
+
+    function even(num) {
+      if (num % 2 === 0) {
+        return true;
+      }
+
+      return false;
+    }
+
+    function check() {
+      try {
+        if (even(input.value)) {
+          para.textContent = `${input.value} is an even number`;
+          para.style.backgroundColor = "green";
+        } else {
+          para.textContent = `${input.value} is odd number`;
+          para.style.backgroundColor = "red";
+        }
+
+        console.log(isNaN(input.value));
+
+        if (isNaN(input.value)) {
+          throw new TypeError("please input a number");
+        } else {
+          checkNumber.style.display = "none";
+        }
+      } catch (e) {
+        checkNumber.textContent = e.message;
+        para.style.display = "none";
+      }
+    }
+
+    btn.addEventListener("click", check);
+
+    // let i = 500;
+    // const para = document.createElement("p");
+
+    // function isPrime(num) {
+    //   for (let i = 2; i < num; i++) {
+    //     if (num % i === 0) {
+    //       return false;
+    //     }
+    //   }
+
+    //   return true;
+    // }
+
+    // // Add your code here
+    // // console.log(i);
+    // while (i >= 2) {
+    //   //   console.log(i);
+    //   if (isPrime(i)) {
+    //     // para.textContent = i;
+    //     para.textContent = para.textContent + `${i} `;
+
+    //     console.log(i);
+    //   }
+    //   i--;
+    // }
+    // // Don't edit the code below here!
+    // const section = document.querySelector("section");
+    // section.appendChild(para);
+  </script>
+</html>
